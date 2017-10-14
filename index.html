@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="/home/reshma/Documents/AcadGild/Web_Fundamentals/Session-6_06Oct2017/Assignment-3/script.js"></script>
+	<title>S-6 Assignment-3</title>
+</head>
+
+<body>
+	<!-- Develop a student result sheet -->
+
+	<!-- Using bootstrap -->
+	<div class="container-fluid col-sm-6 col-md-6">
+		<center><h2>Student Result Sheet</h2></center>
+		<br>
+		
+		<!-- Table that displays results -->
+		<!-- Second column has text input that allows user to enter marks, based on which the result will be displayed. -->
+		<table class="table table-striped">
+			<thead><tr><th>Subject Name</th><th>Marks</th><th>Grade</th></tr></thead>
+			<tbody>
+				<tr><td>Subject-1</td><td><input type="text" name="m1" id="m1"></td><td><span id="g1"></span></td></tr>
+				<tr><td>Subject-2</td><td><input type="text" name="m2" id="m2"></td><td><span id="g2"></span></td></tr>
+				<tr><td>Subject-3</td><td><input type="text" name="m3" id="m3"></td><td><span id="g3"></span></td></tr>
+			</tbody>
+			<tfoot>
+				<tr><td colspan="3">Average = <span id="result"></span></td></tr>
+
+				<!-- The result data is calculated on click of the below button -->
+				<tr><td colspan="3"><center><input type="button" class="btn btn-primary" onclick="calData(document.getElementById('m1').value,document.getElementById('m2').value,document.getElementById('m3').value)" value="Calculate Student Data"></center></td></tr>
+			</tfoot>
+		</table>	
+	</div>
+</body>
+</html>
